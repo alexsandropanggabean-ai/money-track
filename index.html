@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b17">
+  <title>MoneyTrack - Tabungan Saya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">💰</div>
+      <div>
+        <h1>MoneyTrack</h1>
+        <p>Langkah kecil, target tercapai.</p>
+      </div>
+    </header>
+
+    <section class="balance card">
+      <p>Total tabungan saya</p>
+      <h2 id="balance">Rp0</h2>
+      <p class="muted">Kumpulkan uang sedikit demi sedikit ✨</p>
+    </section>
+
+    <section class="card">
+      <h2>🎯 Tujuan tabungan</h2>
+      <form id="goal-form">
+        <label for="goal-name">Nama tujuan</label>
+        <input id="goal-name" type="text"
+          placeholder="Contoh: Beli HP baru" required>
+
+        <label for="goal-target">Target tabungan (Rp)</label>
+        <input id="goal-target" type="number"
+          min="1" step="1" placeholder="2000000" required>
+
+        <button type="submit">Simpan tujuan</button>
+      </form>
+
+      <div id="goal-display">
+        <p>Belum ada tujuan tabungan.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>➕ Tambah tabungan</h2>
+      <form id="saving-form">
+        <label for="amount">Nominal uang (Rp)</label>
+        <input id="amount" type="number"
+          min="1" step="1" placeholder="5000" required>
+
+        <label for="note">Catatan (opsional)</label>
+        <input id="note" type="text"
+          maxlength="80" placeholder="Contoh: Uang jajan disisihkan">
+
+        <button type="submit">Tambah uang</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>📜 Riwayat tabungan</h2>
+      <ul id="history">
+        <li>Belum ada transaksi.</li>
+      </ul>
+    </section>
+
+    <footer>MoneyTrack · Tabungan pribadi saya</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+  </html>
+    
